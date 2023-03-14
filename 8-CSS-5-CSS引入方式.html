@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS引入方式</title>
+    <style>
+        p {
+            text-indent: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h4>CSS的三种样式表：按照CSS样式书写的位置（或者引入方式），CSS样式表可以分为三大类：</h4>
+    <h5>1、行内样式表（行内式）</h5>
+    <p>行内样式表（内联样式表）是在元素标签内部的style属性中设定CSS样式。适合于修改简单样式。格式为<div style="color: red; font-size: 12px;">青春不常在，抓紧谈恋爱</div></p>
+    <p>使用行内样式表设定CSS，通常也被称为行内式引入。style其实就是标签的属性，在双引号中间写法要符合CSS规范，只能控制当前标签的样式，并没有体现结构与样式分离的思想，只有对当前元素添加简单样式的时候可以考虑使用</p>
+    <h5>2、内部样式表（嵌入式）</h5>
+    <p>内部样式表（内嵌样式表）是写到html页面内部，将所有的CSS代码抽取出来，单独放到一个style标签中。</p>
+    <p>style标签理论上可以放在html文档的任何地方，但一般会放在文档的head标签中</p>
+    <p>使用内部样式表设定CSS，通常也被称为嵌入式引入。此种方式可以方便控制当前整个页面中的元素样式设置。代码结构清晰，但是并没有实现结构与样式完全分离，（只是样式与结构部分分离）。</p>
+    <h5>3、外部样式表（链接式）</h5>
+    <p>实际开发都是外部样式表，适用于样式比较多的情况。核心是：样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用。引用外部样式表分两步：</p>
+    <p>1、新建一个后缀名为.css的样式文件，把所有CSS代码都放入次文件中。（这个CSS文件里只有样式没有标签）</p>
+    <p>2、在HTML页面中，使用link标签引入这个文件。语法：link rel="stylesheet" href="css文件路径“</p>
+    <table border="1" cellpadding="10" cellspacing="0" width="500">
+        <thead><tr><th>属性</th><th>作用</th></tr></thead>
+        <tbody>
+            <tr><td>rel</td><td>定义当前文档与被链接文档之间的关系，在这里需要指定为"stylesheet"，表示被链接的文档是一个样式表文件</td></tr>
+            <tr><td>href</td><td>定义所链接外部样式表文件的URL，可以是相对路径也可以是绝对路径</td></tr>
+        </tbody>
+    </table>
+    <p>使用外部样式表设定CSS，通常也被称为外链式或链接式引入，这种方法是开发中最常用的方式</p>
+    <table border="1" cellpadding="10" cellspacing="0" width="500">
+        <thead><tr><td>样式表</td><td>优点</td><td>缺点</td><td>使用情况</td><td>控制范围</td></tr></thead>
+        <tbody>
+            <tr><td>行内样式表</td><td>书写方便，权重高</td><td>结构样式混写</td><td>较少</td><td>控制一个标签</td></tr>
+            <tr><td>内部样式表</td><td>部分结构与样式分离</td><td>没有彻底分离</td><td>较多</td><td>控制一个页面</td></tr>
+            <tr><td>外部样式表</td><td>完全实现结构与样式分离</td><td>需要引入</td><td>最多</td><td>控制多个页面</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

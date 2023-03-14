@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my secend vscode</title>
+</head>
+<body>
+    <h4>注释标签（小写字母，分号）</h4>
+    如果需要在HTML文档中添加一些便于阅读和理解但又不需要显示在页面中的注释文字，就需要使用注释标签。
+    <br/>HTML中的注释以“<!--”开始，以“-->”结束，快捷键添加或删除注释：CTRL+/。
+    <h4>特殊字符</h4>
+    <pre>
+        预留格式标签。定义格式化的文本，文本中的空格和换行符会被保留（否则多个空格和换行只显示为一个空格）。
+        pre标签很适合显示计算机代码：
+        for i=1 to 10
+            print i
+        next i
+        这是预留格式文本。它保留了空格      
+        和空行。
+    </pre>
+    空格符&nbsp;小于号&lt;大于号&gt;和号&amp;人民币&yen;版权&copy;注册商标&reg;摄氏度&deg;
+    <br/>正负号&plusmn;乘号&times;除号&divide;平方(上标2)&sup2;立方(上标3)&sup3;
+    <br/>讲&nbsp;&nbsp;&nbsp;&nbsp;究
+    <br/>&lt; p &gt; 是一个段落标签
+    <br/>html 5以后单标签可以不用加/
+    <h3>表格标签：</h3>
+    表格主要用于显示、展示数据<br>
+    table是用于定义表格的标签<br>
+    tr定义表格中的行，必须嵌套在table标签中。<br>
+    td定义表格中的单元格，必须嵌套在tr标签中。<br>
+    字母td指表格数据，即数据单元格的内容。<br>
+    表头单元格标签th，表头单元格里面的文本内容加粗居中显示。<br>
+    表格属性，通常通过CSS设置。要写在表格标签table里面去<br>
+    单元格里面可以放任何元素，文字链接图片等都可以。<br>
+    thead表格头部区域标签，thead内部必须有tr标签，一般是位于第一行。tbody表格主体区域标签，主要用于放数据本体。<br>
+    <table align="center" border="1" cellpadding="10" cellspacing="0" width="500" height="249">
+        <thead>
+            <tr><th>属性名</th> <th>属性值</th> <th>描述</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>align</td> <td>left、center、right</td> <td>规定表格相对周围元素的对齐方式</td></tr>
+            <tr><td>border</td><td>1或“”</td><td>规定表格单元是否拥有边框，默认为“”，表示没有边框</td></tr>
+            <tr><td>cellpadding</td><td>像素值</td><td>规定单元格边沿与其内容之间的空白，默认1像素</td></tr>
+            <tr><td>cellspacing</td><td>像素值</td><td>规定单元格之间的空白，默认2像素</td></tr>
+            <tr><td>width</td><td>像素值</td><td>规定表格的宽度</td></tr>
+        </tbody>
+    </table>
+    <h4>合并单元格方式：</h4>
+    跨行合并：rowspan=“合并单元格个数”<br>
+    跨列合并：colspan=“合并单元格个数”
+    <h4>目标单元格：</h4>
+    跨行：最上侧单元格为目标单元格，写合并代码<br>
+    跨列：最左侧单元格为目标单元格，写合并代码<br>
+    <h4>合并单元格步骤：</h4>
+    1、确定是跨行还是跨列。<br>
+    2、找到目标单元格。合并格式：合并方式=合并的单元格数量。如：<td colspan="2"></td><br>
+    3、删除多余的单元格。
+    <table width="500" height="249" border="1" cellspacing="0">
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h3>列表标签：</h3>
+    列表就是布局的。分为三类：无序列表、有序列表、自定义列表<br>
+    无序列表：ul标签表示页面中项目的无序列表，一般会以项目符号呈现列表项，而列表项使用li标签定义。<br>
+    1、各个列表项之间无顺序级别之分，并列关系。<br>
+    2、ul中只能嵌套li标签，不能放文字或别的标签。<br>
+    3、li标签相当于一个容器，可以容纳所有元素。（去掉li前面的项目符号（小圆点）：list-style:none;）<br>
+    4、无序列表带有自己的样式属性，但在实际中，使用CSS设置。
+    <h4>您最喜欢的食物是？</h4>
+    <ul>
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+    </ul>
+    有序列表：ol标签用于定义有序列表，列表排序以数字显示，li标签定义列表项。<br>
+    1、ol中只能嵌套li标签，不能放文字或别的标签。<br>
+    2、li标签相当于一个容器，可以容纳所有元素。<br>
+    3、有序列表带有自己的样式属性，但在实际中，使用CSS设置。
+    <h4>您最喜欢的食物是？</h4>
+    <ol>
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+    </ol>
+    自定义列表：常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。<br>
+    dl标签用于定义描述列表（或定义列表），该标签会与dt（定义项目/名字）和dd（描述每一个项目/名字）一起使用。<br>
+    1、dl里面只能包含dt和dd。<br>
+    2、dt和dd个数没有限制，经常是一个dt对应多个dd。dt和dd里面可以放任何标签。<br>
+    3、dt和dd是并列关系。
+    <dl>
+        <dt>名词1</dt>
+        <dd>名词1解释1</dd>
+        <dd>名词2解释2</dd>
+    </dl>
+    <h3>表单标签：</h3>
+    表单主要用于收集用户信息。一个完整的表单由表单域、表单控件（也称表单元素）和提示信息3个部分组成。<br>
+    <h4>表单域</h4>
+    表单域是一个包含表单元素的区域。<br>
+    form标签用于定义表单域，以实现用户信息的收集和传递。form会把它范围内的表单元素信息提交给服务器。<br>
+    常用属性：<br>
+    属性     属性值    作用<br>
+    action  url地址   用于指定接受并处理表单数据的服务器程序的url地址。<br>
+    method  get/post  用于设置表单数据的提交方式，取值为get或post。<br>
+    name    名称      用于指定表单的名称，以区分同一个页面中的多个表单域。
+    <form action="demo.php" method="POST" name="name1">
+        各种表单元素控件
+    </form>
+</body>
+</html>

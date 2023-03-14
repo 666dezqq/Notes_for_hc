@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS字体颜色及样式</title>
+</head>
+<body>
+    <p>Fonts(字体)属性用于定义字体系列、大小、粗细和文字样式（如斜体）</p>
+    <h4>字体系列：使用font-family属性定义文本的字体系列。</h4>
+    <p>p { font-family:"微软雅黑"; } </p>
+    <p>div {font-family:Arial,"Microsoft Yahei", "微软雅黑 "; } </p>
+    <p>各种字体之间必须使用英文状态下的逗号隔开，一般情况下，如果有空格隔开的多个单词组成的字体要加引号。</p>
+    <P>尽量使用系统默认自带字体，保证在任何用户的浏览器中都能正确显示。</P>
+    <p>常见的几个字体：body{font-family:'Microsoft Yahei',tahoma,arial,'Hiragino Sans GB';}</p>
+    <h4>字体大小：使用font-size属性定义字体大小。</h4>
+    <p>p {font-size: 20px; }</p>
+    <p>px(像素)大小是网页最常用的单位。谷歌浏览器默认的字体大小是16px。不同浏览器可能默认显示的字号大小不一致，要尽量给一个明确值大小。</p>
+    <p>可以给body指定整个页面文字的大小。但标题标签比较特殊，需要单独指定文字大小</p>
+    <h4>字体粗细：font-weight</h4>
+    <table align="center" border="1" cellpadding="10" cellspacing="0" width="500" height="249">
+        <thead><tr><th>属性值</th><th>描述</th></tr></thead>
+        <tbody>
+            <tr><td>normal</td><td>默认值（不加粗的）</td></tr>
+            <tr><td>bold</td><td>定义粗细（加粗的）</td></tr>
+            <tr><td>100~900</td><td>400等同于normal，700等同于bold，注意数字后不要跟单位</td></tr>
+        </tbody>
+    </table>
+    <h4>字体样式：使用font-style属性设置文本的风格</h4>
+    <p>p {font-style: nomrmal; }</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0" width="500" height="249">
+        <thead><tr><th>属性值</th><th>作用</th></tr></thead>
+        <tbody>
+            <tr><td>normal</td><td>默认值，浏览器会显示标准的字体样式 font-style: normal;</td></tr>
+            <tr><td>italic</td><td>浏览器会显示倾斜的字体样式。</td></tr>
+        </tbody>
+    </table>
+    <p>实际开发中很少将字体改为倾斜，反而要将斜体标签（em，i）改为不倾斜字体。</p>
+    <h4>字体复合属性：简写的方式，节约代码</h4>
+    <p>font: font-style font-weight font-size/line-weight font-family;</p>
+    <p>使用font属性时，必须按照上面语法格式中的顺序书写，不能更换顺序，并且各个属性间以空格隔开。</p>
+    <p>不需要设置的属性可以省略（取默认值），但必须保留font-size和font-family属性，否则font属性将不起作用。</p>
+    <table align="center" border="1" cellpadding="10" cellspacing="0" width="500" height="249">
+        <thead><tr><th>属性</th><th>表示</th><th>注意点</th></tr></thead>
+        <tbody>
+            <tr><td>font-size</td><td>字号</td><td>常用单位为px像素，一定要带单位</td></tr>
+            <tr><td>font-family</td><td>字体</td><td>实际工作中按团队约定来写字体</td></tr>
+            <tr><td>font-weight</td><td>字体粗细</td><td>加粗是700或bold，不加粗是normal或400，不带单位</td></tr>
+            <tr><td>font-style</td><td>字体样式</td><td>倾斜是italic，不倾斜是normal，常用normal</td></tr>
+            <tr><td>font</td><td>字体连写</td><td>字体连写是有顺序的，不能随意换位置，字号和字体必须同时出现</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

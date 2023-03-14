@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+</head>
+<body>
+    <p>网页布局三大核心：盒子模型、浮动和定位</p>
+    <p>网页布局过程：</p>
+    <p>1、先准备好相关的网页元素，网页元素基本都是盒子</p>
+    <p>2、利用CSS设置好盒子样式，然后摆放到相应位置</p>
+    <p>3、往盒子里面装内容</p>
+    <p>网页布局的核心本质就是利用CSS摆盒子</p>
+    <p>所谓盒子模型，就是把HTML页面中的布局元素看作是一个矩形的盒子，也就是一个盛装内容的容器。CSS盒子模型本质上就是一个盒子，封装周围的HTML元素，它包括：边框(border)、外边距(margin)、内边距(padding)和实际内容(content)</p>
+    <p>border可以设置元素的边框，边框由边框宽度(粗细)、边框样式和边框颜色三部分组成。语法：border : border-width || border-style || border-color  border-width: 定义边框粗细，单位是px；border-style : 边框的样式；border-color : 边框颜色</p>
+    <p>CSS边框属性允许指定一个元素边框的样式和颜色。边框简写：border: 1px solid red; 没有顺序 分开：border-top border-bottom borderleft border-right</p>
+    <p>border-collapse: collapse; 表示相邻边框合并在一起</p>
+    <p>边框会额外增加盒子的大小，解决方案：1、测量盒子大小的时候不要测量边框；2、如果测量时包含了边框则需要width/height减去边框宽度</p>
+    <p>内边距(padding)属性用于设置内边距，即边框与内容之间的距离 padding-left padding-right padding-top padding-bottom 左/右/上/下内边距</p>
+    <p>padding属性（简写属性）：padding:5px; 1个值, 代表上下左右都有5像素内边距；padding:5px 10px; 2个值, 代表上下边距是5像素 左右内边距是10px；padding:5px 10px 20px; 3个值, 代表上内边距5像素 左右内边距10像素 下内边距20像素；padding:5px 10px 20px 30px; 4个值, 上是5像素 右10像素 下20像素 左30像素 顺时针</p>
+    <p>当给盒子指定padding值之后：1、内容和边框有了距离，添加了内边距 2、padding影响了盒子实际大小 也就是说，如果盒子已经有了宽度和高度，此时再指定内边框，会撑大盒子。解决方案：如果保证盒子跟效果图大小保持一致，则让width/height减去多出来的内边距大小即可</p>
+    <p>如果盒子本身没有指定width/height属性，则此时padding不会撑开盒子大小</p>
+    <p>盒子模型外边距margin属性用于设置外边距，即控制盒子和盒子之间的距离。margin-left | margin-right | margin-top | margin-bottom  margin简写方式代表的意义跟padding完全一致</p>
+    <p>外边距可以让块级盒子实现水平居中，但必须满足：1、盒子必须指定宽度（width） 2、盒子左右的外边距都设置为auto  .header { width: 900px;margin: 0 auto;} 常见写法：1、margin-left:auto; margin-right:auto; 2、margin:auto; 3、margin: 0 auto; </p>
+    <p>注意：以上方法是让块级元素水平居中，行内元素或者行内块元素水平居中给其父元素添加text-align:center; 即可</p>
+    <p>外边距合并：使用margin定义块元素的垂直外边距时，可能会出现外边距的合并</p>
+    <p>1、相邻块元素垂直外边距的合并：当上下相邻的两个块元素（兄弟关系）相遇时，如果上面的元素有下外边距margin-bottom，下面的元素有上外边距margin-top，则他们之间的垂直间距不是margin-bottom与margin-top之和。取两个值中的较大者这种现象被称之为相邻块元素垂直外边距的合并。解决方案：尽量只给一个盒子添加margin值。</p>
+    <p>2、嵌套块元素垂直外边距的塌陷：对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值。解决方案：1、可以为父元素定义上边框。2、可以为父元素定义上内边框。3、可以为父元素添加overflow:hidden;(常用，不会增大盒子)。还有其他方法比如浮动、固定，绝对定位的盒子不会有塌陷问题。</p>
+    <p>清除内外边距：网页元素很多都带有默认的内外边距，而且不同浏览器默认的也不一致，因此我们在布局前，首先要清除下网页元素的内外边距。* { padding:0;margin:0;} 注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距(不起效果)。但是转换为块级和行内块元素就可以了。</p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素的显示与隐藏</title>
+</head>
+<body>
+    <p>1、display 显示隐藏元素 但是不保留位置
+        display 属性用于设置一个元素应该如何显示
+        display: none; 隐藏对象
+        display: block; 除了转换为块级元素之外，同时还有显示元素的意思
+        display 隐藏元素后，不再占有原来的位置
+    </p>
+    <p>2、visibility 显示隐藏元素 但是保留原来的位置
+        visibility 属性用于指定一个元素应可见还是隐藏
+        visibility: visible; 元素可视
+        visibility: hidden; 元素隐藏
+        visibility 隐藏元素后，继续占有原来的位置
+    </p>
+    <p>
+        如果隐藏元素想要原来的位置就用visibility: hidden; 如果隐藏元素不想要原来的位置就用display: none; 
+    </p>
+    <p>3、overflow 溢出显示隐藏 但是只是对于溢出的部分处理
+        overflow 属性指定了如果内容溢出一个元素的框(超过其指定高度及宽度)时会发生什么
+        overflow: visible; 不剪切内容也不添加滚动条
+        overflow: hidden; 不显示超过对象尺寸的内容，超出的部分隐藏掉
+        overflow: scroll; 不管超出内容否，总是显示滚动条
+        overflow: auto; 超出自动显示滚动条，不超出不显示滚动条
+    一般情况下，我们都不想让溢出的内容显示出来，因为溢出的部分会影响布局
+    但是如果有定位的盒子，请慎用overflow: hidden; 因为它会隐藏多余的部分
+    </p>
+</body>
+</html>
