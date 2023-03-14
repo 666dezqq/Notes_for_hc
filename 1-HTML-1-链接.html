@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first vscode</title>
+    <style type="text/css">
+        span{
+            color: blue;
+            /* 字体颜色为蓝色 */
+            font-weight: bold;
+            /* 加粗显示 */
+        }
+    </style>
+</head>
+<body>
+    <h4>使用注意</h4>
+    <p>1、先新建文件（CTRL+N）</p>
+    <p>2、保存（CTRL+S），注意一定要保存为.html文件</p>
+    <p>3、CTRL+加号或减号放缩视图</p>
+    <p>4、生成页面骨架结构：输入！按下Tab键</p> 
+    <p>5、利用插件在浏览器中预览页面：<br/>单击鼠标右键，在弹出窗口中点击“Open In Default Browser”</p>
+    <p>水平线标签</p>
+    <hr> 
+    <p>默认从网页左端一直到右端</p>
+    <!-- 注释标签 可跨行 -->
+    <h4>文本格式化标签</h4>
+    <strong>键盘敲烂，薪资过万。strong加粗</strong>
+    <b>键盘敲烂，薪资过万。b加粗</b>
+    <em>键盘敲烂，薪资过万。em斜体</em>
+    <i>键盘敲烂，薪资过万。i斜体</i>
+    <del>键盘敲烂，薪资过万。del删除线</del>
+    <s>键盘敲烂，薪资过万。s删除线</s>
+    <ins>键盘敲烂，薪资过万。ins下划线</ins>
+    <u>键盘敲烂，薪资过万。u下划线</u>
+    <div>我是用来装内容的盒子，没有语义，大盒子div一个占一行</div>
+    <span>我是用来装内容的盒子，没有语义，小盒子span一行放多个（跨距）</span><br>
+    span标签组合行内元素，以便通过CSS样式来格式化<br>
+    <p>最新<span>中国人口调查报告</span>指出</p>
+    <div>百度</div>
+    <div>新浪</div>
+    <span>百度</span>
+    <span>新浪</span>
+    <h4>图片格式：</h4>
+    <p>JPG：有损压缩，色彩丰富图片</p>
+    <p>GIF：简单动画，背景透明</p>
+    <p>PNG：无损压缩（支持有损无损两种方式），透明（可以给图片制定一种颜色，使其不被显示而成为透明），交错（在显示图片的过程中可以从概貌逐渐变化到全貌，看上去就是清晰度的从小变大），动画</p>
+    <h4>图像标签的使用：</h4>
+    <img src="xz.jpeg"/>
+    <h4>alt替换文本 图像显示不出来的时候用文字替换：</h4>
+    <img src="xz1.jpg" alt="这是xz打网球照片"/>
+    <h4>title提示文本 鼠标放在图像上提示的文字：</h4>
+    <img src="xz.jpeg" alt="这是xz打网球照片" title="这是xz打网球照片"/>
+    <h4>width 给图像设定宽度：</h4>
+    <img src="xz.jpeg" alt="这是xz打网球照片" title="这是xz打网球照片" width="500" />
+    <h4>height 给图像设定高度：</h4>
+    <img src="xz.jpeg" alt="这是xz打网球照片" title="这是xz打网球照片" height="200"/>
+    <h4>宽度和高度一般只修改一个（等比例缩放，避免失真）</h4>
+    <h4>border 给图像设定边框（一般用css设定）：</h4>
+    <img src="xz.jpeg" alt="这是xz打网球照片" title="这是xz打网球照片" width="500" border="15"/>
+    <h4>图像标签的使用注意点：</h4>
+    1、图像标签可以有多个属性，必须写在标签名的后面。<br/> 
+    2、属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。<br/> 
+    3、属性采取键值对的格式，即key="value"的格式，属性="属性值"。<br/> 
+    <h4>相对路径(/)：图片相对于HTML页面所在文件夹的位置，以该文档所在位置为基准。<br/>绝对路径(\)：目录的绝对位置，直接到达目标位置，通常是从盘符开始的路径包括网址，以根目录为基准。</h4>
+    <h4>图片在同一级文件夹src="文件名"，下一级文件夹src="文件夹名/文件名"，在上一级文件夹src="../文件名"</h4>
+    <h4>超链接标签'<a>'，从一个页面链接到另一个页面</h4>
+    语法：<a href="跳转目标" target="目标窗口的弹出方式">文本或图像</a><br/>
+    href:用于指定链接目标的url地址，（必须属性）当为标签应用href属性时它就具有了超链接的功能。<br/>
+    target:用于指定链接页面的打开方式，其中_self为默认值在当前窗口打开页面，_blank为在新窗口中打开页面。<br/>
+    <h3>连接分类：</h3>
+    <h4>1、外部链接</h4>
+    <a href="http://www.qq.com" target="_blank">腾讯</a>
+    <h4>2、内部链接：网站内部页面之间的相互链接，直接写网页名称+后缀名</h4>
+    <a href="第一次学习.html" target="_blank">第一次学习</a>
+    <h4>3、空链接（虚拟超链接）：#，没有确定链接目标时</h4>
+    <a href="#">首页</a>
+    <h4>4、下载链接:href地址链接的是一个文件.exe或者压缩包.zip等形式，会下载这个文件。</h4>
+    <a href="xz.zip">下载文件</a>
+    <h4>5、网页元素链接：在网页中的各种元素，如文本，图像，表格，音频，视频等都可以添加超链接。</h4>
+    <a href="http://www.baidu.com"><img src="xz.jpeg" alt="这是xz打网球照片" height="200"/></a>
+    <h4>6、瞄点链接：当我们点击链接，可以快速定位到页面中某个位置。</h4>
+    <br/>在链接文本的href属性中，设置属性值为#名字的形式，如<a href="#two">第二集</a>
+    <br/>找到目标位置标签，里面添加一个id属性=刚才的名字，如<h3 id="two">第二集介绍</h3>
+</body>
+</html>
